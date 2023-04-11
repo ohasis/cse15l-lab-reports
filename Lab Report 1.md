@@ -1,7 +1,8 @@
 # Hello, fellow CSE 15L student!
 Welcome to lab report number one. When attempting to remotely access a server via a course-specific account, 
 you should take the following steps to ensure success!
-***
+
+---
 
 ## 1. Installing VScode
 
