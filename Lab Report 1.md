@@ -38,7 +38,7 @@ pressing return.
 
 Once you are greeted with a terminal that looks something like this, you will be able to remotely access the server!
 
-![Image](step2.jpg)
+![Image](step3.jpg)
 
 
 ## 3. Trying Some Commands
@@ -48,7 +48,7 @@ depending on whether or not you are logged into the server.
 
 For example, you might consider these:
 
-`cd ~`
+`rgb(9, 105, 218) cd ~`
 
 `cd`
 
@@ -56,9 +56,15 @@ For example, you might consider these:
 
 `cat /home/linux/ieng6/cs15lsp23/public/hello.txt`
 
-In my case, I tried the command `ls -lat`, which returned the following:
+One command I tried was `ls -lat`, which returned the following:
 
-![Image](step3.jpg)
+![Image](step2.jpg)
+
+A second command I tried was `pwd`, the result of which is returned below.
+
+`pwd` stands for print working directory and, as the acronym suggests, prints the working directory, which indicates the path a program may use to determine the location of a specific file.
+
+![Image](step4.jpg)
 
 Once completed, you may log out of the server by using `Ctrl` and `D`.
 
