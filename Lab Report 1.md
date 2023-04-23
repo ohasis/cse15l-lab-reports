@@ -48,13 +48,13 @@ depending on whether or not you are logged into the server.
 
 For example, you might consider these:
 
-`cd ~`: change the directory to the specified path.
-
-`ls -lat`: lists all files and folders in the path, which is `-lat` in this instance.
-
-`cat /home/linux/ieng6/cs15lsp23/public/hello.txt`: concatentate two files together. Because there is only one file mentioned in this case, the terminal will simply print out `hello.txt`.
-
 `pwd`: print working directory, which indicates the path a program may use to determine the location of a specific file.
+
+`cd ~`: change the directory where you are currently working.
+
+`ls -lat`: lists all files and folders in the given path, which is `-lat` in this instance.
+
+`cat /home/linux/ieng6/cs15lsp23/public/hello.txt`: concatentate two files together. Because there is only one file mentioned in this command, the terminal will simply print the contents of the file `hello.txt`.
 
 The first command I tried was `ls -lat`, which returned the following:
 
