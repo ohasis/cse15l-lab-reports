@@ -17,19 +17,19 @@ If installed correctly, you should be able to open a window that looks something
 
 ## 2. Remotely Connecting
 
-The second step is to remotely connect to the server using your course-specific account on `ieng6`. 
-To use `ssh`, open a terminal in VScode via View → Terminal on macOS.
+The second step is to remotely connect to the server using your course-specific account on ``ieng6``. 
+To use ``ssh``, open a terminal in VScode via View → Terminal on macOS.
 
-Type in the command as such, but with `xx` replaced with the letters in your course-specific account. Don't forget that `$` is directing the spot where
+Type in the command as such, but with ``xx`` replaced with the letters in your course-specific account. Don't forget that ``$`` is directing the spot where
 the command is to be typed, and is not meant to be inputed with the rest of the command.
 
-`$ ssh cs15lsp23xx@ieng6.ucsd.edu`
+``$ ssh cs15lsp23xx@ieng6.ucsd.edu``
 
 If you are unsure as to what the letters of your course-specific account are, use the [UCSD lookup system](https://sdacs.ucsd.edu/~icc/index.php)
 to help you out.
 
 As this will most likely be the first time you are connecting to the server, you will be prompted with a question as to whether or not you want to 
-continue connecting. Type `yes` into the terminal and press return.
+continue connecting. Type ``yes`` into the terminal and press return.
 
 Now, the server will prompt you for your password as a security measure. You must reset your password with the pasword change tool on the 
 [UCSD lookup system](https://sdacs.ucsd.edu/~icc/index.php). Don't forget that you are reseting your password for this class only, not the 
@@ -48,22 +48,22 @@ depending on whether or not you are logged into the server.
 
 For example, you might consider these:
 
-`pwd`: print working directory, which indicates the path a program may use to determine the location of a specific file.
+``pwd``: print working directory, which indicates the path a program may use to determine the location of a specific file.
 
-`cd ~`: change the directory where you are currently working.
+``cd ~``: change the directory where you are currently working.
 
-`ls -lat`: lists all files and folders in the given path, which is `-lat` in this instance.
+``ls -lat``: lists all files and folders in the given path, which is `-lat` in this instance.
 
-`cat /home/linux/ieng6/cs15lsp23/public/hello.txt`: concatentate two files together. Because there is only one file mentioned in this command, the terminal will simply print the contents of the file `hello.txt`.
+``cat /home/linux/ieng6/cs15lsp23/public/hello.txt``: concatentate two files together. Because there is only one file mentioned in this command, the terminal will simply print the contents of the file ``hello.txt``.
 
-The first command I tried was `ls -lat`, which returned the following:
+The first command I tried was ``ls -lat``, which returned the following:
 
 ![Image](step2.jpg)
 
-A second command I tried was `pwd`, the result of which is returned below.
+A second command I tried was ``pwd``, the result of which is returned below.
 
 ![Image](step4.jpg)
 
-Once completed, you may log out of the server by using `Ctrl` and `D`.
+Once completed, you may log out of the server by using ``Ctrl`` and ``D``.
 
-**Congratulations, you have now learned how to access the remote server using `ieng6`!**
+**Congratulations, you have now learned how to access the remote server using ``ieng6``!**
