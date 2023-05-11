@@ -42,7 +42,88 @@ which is a two element array containing the result of splitting the URI at its e
 
 ## Part 2
 
-``public class ArrayExamples {
+The following bug is a part of the ``reverseInPlace(int[] arr)`` method in ``ArrayExamples.java``, and its corresponding
+test was assessed in ``ArrayTests.java``.
+
+**Failure-Inducing Input**
+
+```
+public void testReverseInPlace1() {
+
+    int[] input1 = {0, 1, 2, 3, 4};
+
+    ArrayExamples.reverseInPlace(input1);
+
+    assertArrayEquals(new int[]{4, 3, 2, 1, 0}, input1);
+
+  }  
+```
+This failure-inducing input yields ``{4, 3, 2, 3, 4}``, which differs from the expected output.
+
+**Non Failure-Inducing Input**
+```
+public void testReverseInPlace2() {
+
+  int[] input2 = {6};
+  
+  ArrayExamples.reverseInPlace(input2);
+  
+  ArrayExamples.reverseInPlace(input2);
+  
+  assertArrayEquals(new int[]{6}, input2);
+  
+ }
+ ```
+ 
+ This non failure-inducing input yields ``{6}``, which is the same as the expected output.
+
+**Symptom**
+
+![Image](Symptom.png)
+
+As shown by the JUNIT tests, the first one with the multi-element array does not work as expected, as it expeced the 
+1 to be located at a different index than that of the current ouput. The single-element array's test, on the other
+hand, shows that the current output has been produced and the test has been passed.
+
+**Bug**
+
+Below is what was initally located within the body of the method:
+
+```
+static void reverseInPlace(int[] arr) {
+
+    for(int i = 0; i < arr.length; i += 1) {
+    
+      arr[i] = arr[arr.length - i - 1];
+      
+    }
+    
+  }
+```
+
+Below is what is now initally located within the body of the method:
+
+```
+static int[] reverseInPlace(int[] arr) {
+
+    for(int i = 0; i < arr.length / 2; i += 1) {
+    
+      int temp = arr[i];
+      
+      arr[i] = arr[arr.length - i - 1];
+      
+      arr[arr.length - i - 1] = temp;
+    }
+    
+    return arr;
+    
+  }
+```
+
+The code fix addresses the appropriate issue with the program because now the elements that are located at the halfway
+point in the array will not be immediately added, completely replaced by that which was already there. Rather, it saves the
+element into a ``temp`` variable and then assigns it to the values at the correct 
+
 
 
 ## Part 3
