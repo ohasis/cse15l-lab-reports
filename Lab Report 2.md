@@ -5,28 +5,44 @@ Hello, fellow CS 15L student! Welcome to lab report number two.
 
 ## Part 1
 
-Below is my code of the StringServer file, which creates a basic search engine for string queries.
+Below is my code of ``StringServer``, which creates a basic search engine for string queries.
 
 ![Image](StringServer.png)
 
-Here is my entry of ``add-message?s=Hello``:
+Below is my entry upon adding entering the request ``add-message?s=Hello`` :
 
 ![Image](Hello.png)
 
-Here is my entry of ``add-message?s=How Are You``:
+- My code calls the methods ``getPath()`` and ``getQuery()`` to take in the given path, query, 
+respectively.
+- The relevant argument to ``getPath()`` is ``/add-message``. Two of its specific values
+are ``http://localhost:4004``, which is the URI, and ``4004``, which is the port number. ``/add-message`` is its 
+path, which is assessed as a ``String`` and compared in the if-statement in ``StringServer``.
+- The relevant argument to ``getQuery()`` is ``?s=Hello``. Its specific value is ``Hello``, which is a ``String``
+used to determine whether or not the body of the if-statement should be executed.
+- One field changed after this request is processed is ``message``, which is appended to include ``Hello``:
+the first query. Another field that is changed is the ``String[] array`` ``parameters``, which is a two element
+array containing the result of splitting the URI at its equal sign.
+
+Below is my entry upon adding entering the request ``add-message?s=How Are You`` :
 
 ![Image](HowAreYou.png)
 
-I have called the methods getPath() and getQuery() to take in the file path and query to assess them appropriately before 
-concatenating them to the message string.
+- My code calls the methods ``getPath()`` and ``getQuery()`` to take in the given path, query, 
+respectively.
+- The relevant argument to ``getPath()`` is ``/add-message``. Two of its specific values
+are ``http://localhost:4004``, which is the URI, and ``4004``, which is the port number. ``/add-message`` is its 
+path, which is assessed as a ``String`` and compared in the if-statement in ``StringServer``.
+- The relevant argument to ``getQuery()`` is ``?s=How are you``. Its specific value is ``How are you``, which is a ``String``
+used to determine whether or not the body of the if-statement should be executed.
+- A field changed after this request is processed is ``message``, which is appended to include ``How are you``
+in addition to ``Hello``, which it already contains. Another field that is updated is the ``String[] array`` ``parameters``,
+which is a two element array containing the result of splitting the URI at its equal sign.
 
-The relevant arguments to these methods, respectively, are the given URLs and queries from the user. They are String values
-that are added to the message string.
-
-The message field changes based on the query that the user enters, as it needs to be updated to reflect previous queries. If
-there aren't any, then no change is made.
 
 ## Part 2
+
+``public class ArrayExamples {
 
 
 ## Part 3
