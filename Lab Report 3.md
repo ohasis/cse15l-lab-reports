@@ -59,6 +59,7 @@ The second result of the ChatGPT prompt
 
 ```Do you have any more command line options to use the find command?```
 
-this command line option was noted to be for searching by file size.
+was given in the same thread as the previous question. This command line option was noted to be
+for searching by file size.
 
 **Congratulations, you have now learned about potential options regarding use of the `find` command!**
