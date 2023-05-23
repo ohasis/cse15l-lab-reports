@@ -1071,7 +1071,8 @@ Output:
 ./911report/chapter-11.txt
 ```
 This command allows the user to search for files of type `f`, which are regular files, which is why there are so many lines of
-code in the output; there are many regular files in the `./technical` directory.
+code in the output; there are many regular files in the `./technical` directory. This may benefit a user who wishes to specifically
+exclude or include regular files when a particular file type is essential for the task at hand.
 
 **Source**
 
@@ -1101,7 +1102,8 @@ Output:
 ```
 
 Although the find command searches all subdirectories by default, the number specification after `-maxdepth` limits it exclusively
-to what is in current directory, which is `./technical`. Therefore, only the four subdirectories are listed.
+to what is in current directory, which is `./technical`. Therefore, only the four subdirectories are listed. This is benefical to
+users who may only want to perform a search on the first subdirectories of a larger file, should it possess them.
 
 **b. Example Two**
 
@@ -1133,7 +1135,8 @@ Output:
 ```
 
 This variation of the command `find -maxdepth` limits the search to the first subdirectory in `./technical`, which is
-`../911report`. All of the files listed are located in this particular subdirectory.
+`../911report`. All of the files listed are located in this particular subdirectory. This proves useful for users hoping to
+limit the scope of their commands to only those in particular locations within the file structure.
 
 **Source**
 
@@ -2187,7 +2190,9 @@ Output:
 ```
 
 This command returns the result of searching for files within `./technical` that end with `.TXT`. Regardless of whether or not
-`.TXT` is capitalized in their names, they are returned, which is why so many file paths are listed in the output.
+`.TXT` is capitalized in their names, they are returned, which is why so many file paths are listed in the output. This is useful because 
+some files may have slightly different capitalization formatting, but the user may still wish to perform 
+the same operation on all of them nevertheless.
 
 **b. Example Two**
 
@@ -2200,7 +2205,8 @@ Output:
 `./biomed`
 
 The command listed above returns the file path of the subdirectory `./biomed` because, even though the command uses all uppercase
-letters, the inclusion of `-iname` ensures that capitalization is ignored.
+letters, the inclusion of `-iname` ensures that capitalization is ignored. This is helpful to the user because they might want
+to determine whether a particular directory exists, but may not know how its name is capitalized, if at all.
 
 **Source**
 
@@ -2215,7 +2221,49 @@ ChatGPT yielded the command listed above as the first result, describing it as a
 
 **a. Example One**
 
+Input:
+
+`$ find . -size +200k`
+
+Output:
+
+```
+./government/About_LSC/commission_report.txt
+./government/Env_Prot_Agen/bill.txt
+./government/Gen_Account_Office/GovernmentAuditingStandards_yb2002ed.txt
+./government/Gen_Account_Office/Statements_Feb28-1997_volume.txt
+./government/Gen_Account_Office/d01591sp.txt
+./911report/chapter-13.4.txt
+./911report/chapter-13.5.txt
+./911report/chapter-3.txt
+```
+
+This particular command finds and returns files that are larger than 200 KB or 200 kilobytes, which may be useful when determining
+which files might take longer to parse through because of their size.
+
 **b. Example Two**
+
+Input:
+
+`find . -size -1k`
+
+Output:
+
+```
+.
+./government
+./government/About_LSC
+./government/Env_Prot_Agen
+./government/Alcohol_Problems
+./government/Post_Rate_Comm
+./plos/pmed.0020191.txt
+./plos/pmed.0020226.txt
+./911report
+```
+
+This command finds and returns files less than 1 KB or 1 kilobyte of memory, which as the output shows, includes six directories
+as well. Finding a file type this small may be beneficial for deciding which files may be the most suitable for testing, as
+their small size will do little to hinder the speed of the runtime of a program.
 
 **Source**
 
