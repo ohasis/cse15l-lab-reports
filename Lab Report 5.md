@@ -29,7 +29,7 @@ Error: Could not find or load main class ListExamples
 Caused by: java.lang.ClassNotFoundException: ListExamples
 ```
 
-Rather than these errors, I expected to see two correct test classes passing, namely `StringChecker` and `TestListExamples`.
+Rather than these errors, I expected to see two correct test classes passing within the `TestListExamples` file.
 
 In the autograder, I am seeing the following terminal output:
 
