@@ -82,6 +82,16 @@ Rather than these errors, I expected to see that both of my tests had passed.
 command-line arguments, working directory, even the last few commands you ran. Do your best to provide as much context 
 as you can.**
 
+The following are screenshots of my file `ListExamples.java`, which I was attempting to compile and run:
+
+![Image](ListExamples1.png)
+
+![Image](ListExamples2.png)
+
+The following is a screenshot of my tester for `ListExamples.java`, which is named `TestListExamples.java`.
+
+![Image](TestListExamples.png)
+
 I compiled my file `ListExamples.java`, which worked. However, when I tried to run it, I recieved the following error:
 
 ![Image](StudentCode.png)
@@ -93,10 +103,15 @@ the given names are written as such so that there are no discrepancies when they
 
 *Student Screenshot After Edit*
 
+After editing the file, this is the student's terminal output from the autograder:
 
+![Image](AutograderResubmission.png)
 
 *Description of Bug*
 
+The bug, which was a `Class Not Found Exception`, was easily fixed with an edit to the class header, which was incorrectly
+labeled within the file as `ListExample`. Although the file name was correct, the class name was not, which meant that
+the file could not run properly both within the student's terminal or be tested properly within the autograder.
 
 ## 2. Reflection
 
