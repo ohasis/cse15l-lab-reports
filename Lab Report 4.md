@@ -22,7 +22,7 @@ when determining the correct keystrokes to make.
 ## Step 7
 **Edit the code file to fix the failing test.**
 
-*Keys Pressed:* `vim ListExamples.java <enter>`, `<up><up><up><up><up><up> x`,
+*Keys Pressed:* `vim ListExamples.java <enter>`, `<up><up><up><right><right><right><right><right><right><right><right><right> x`,
 `i <enter>`, `2 <enter>`, `<esc>`, `:wq`
 
 ## Step 8
