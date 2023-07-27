@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess the Number Minigame</title>
+</head>
+<body>
+  <h1>Guess the Number Minigame</h1>
+  <p>Try to guess the number between 1 and 100:</p>
+  <input type="number" id="userGuess">
+  <button onclick="checkGuess()">Submit</button>
+  <p id="result"></p>
+
+  <script>
+    // Global variables
+    const minNumber = 1;
+    const maxNumber = 100;
+    let targetNumber = generateRandomNumber(minNumber, maxNumber);
+    let attempts = 0;
+
+    function generateRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function checkGuess() {
+      const userGuess = parseInt(document.getElementById('userGuess').value);
+
+      if (isNaN(userGuess) || userGuess < minNumber || userGuess > maxNumber) {
+        alert(`Please enter a number between ${minNumber} and ${maxNumber}.`);
+        return;
+      }
+
+      attempts++;
+
+      if (userGuess === targetNumber) {
+        showResult(`Congratulations! You guessed the number ${targetNumber} in ${attempts} attempts.`);
+        return;
+      } else if (userGuess < targetNumber) {
+        showResult('Try again. The number is higher.');
+      } else {
+        showResult('Try again. The number is lower.');
+      }
+    }
+
+    function showResult(message) {
+      document.getElementById('result').textContent = message;
+    }
+  </script>
+</body>
+</html>
