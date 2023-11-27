@@ -84,17 +84,17 @@ as you can.**
 
 The following are screenshots of my file `ListExamples.java`, which I was attempting to compile and run:
 
-![Image](ListExamples1.png)
+![Image](supplemental-images/ListExamples1.png)
 
-![Image](ListExamples2.png)
+![Image](supplemental-images/ListExamples2.png)
 
 The following is a screenshot of my tester for `ListExamples.java`, which is named `TestListExamples.java`.
 
-![Image](TestListExamples.png)
+![Image](supplemental-images/TestListExamples.png)
 
 I compiled my file `ListExamples.java`, which worked. However, when I tried to run it, I recieved the following error:
 
-![Image](StudentCode.png)
+![Image](supplemental-images/StudentCode.png)
 
 *TA Response*
 
@@ -105,7 +105,7 @@ the given names are written as such so that there are no discrepancies when they
 
 After editing the file, this is the student's terminal output from the autograder:
 
-![Image](AutograderResubmission.png)
+![Image](supplemental-images/AutograderResubmission.png)
 
 *Description of Bug*
 

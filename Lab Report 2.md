@@ -7,11 +7,11 @@ Hello, fellow CS 15L student! Welcome to lab report number two.
 
 Below is my code of ``StringServer``, which creates a basic search engine for string queries.
 
-![Image](StringServer.png)
+![Image](supplemental-images/StringServer.png)
 
 Below is my entry upon adding entering the request ``add-message?s=Hello`` :
 
-![Image](Hello.png)
+![Image](supplemental-images/Hello.png)
 
 - My code calls the methods ``getPath()`` and ``getQuery()`` to take in the given path, query, 
 respectively.
@@ -26,7 +26,7 @@ array containing the result of splitting the URI at its equal sign.
 
 Below is my entry upon adding entering the request ``add-message?s=How Are You`` :
 
-![Image](HowAreYou.png)
+![Image](supplemental-images/HowAreYou.png)
 
 - My code calls the methods ``getPath()`` and ``getQuery()`` to take in the given path, query, 
 respectively.
@@ -79,7 +79,7 @@ public void testReverseInPlace2() {
 
 **Symptom**
 
-![Image](Symptom.png)
+![Image](supplemental-images/Symptom.png)
 
 As shown by the JUNIT tests, the first one with the multi-element array does not work as expected, as it expeced the 
 1 to be located at a different index than that of the current ouput. The single-element array's test, on the other

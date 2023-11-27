@@ -12,7 +12,7 @@ computer. Be sure to select the right one for your operating system, such as mac
 
 If installed correctly, you should be able to open a window that looks something like this, though it may have a slightly different color theme.
 
-![Image](step1.jpg)
+![Image](supplemental-images/step1.jpg)
 
 
 ## 2. Remotely Connecting
@@ -38,7 +38,7 @@ pressing return.
 
 Once you are greeted with a terminal that looks something like this, you will be able to remotely access the server!
 
-![Image](step3.jpg)
+![Image](supplemental-images/step3.jpg)
 
 
 ## 3. Trying Some Commands
@@ -58,11 +58,11 @@ For example, you might consider these:
 
 The first command I tried was ``ls -lat``, which returned the following:
 
-![Image](step2.jpg)
+![Image](supplemental-images/step2.jpg)
 
 A second command I tried was ``pwd``, the result of which is returned below.
 
-![Image](step4.jpg)
+![Image](supplemental-images/step4.jpg)
 
 Once completed, you may log out of the server by using ``Ctrl`` and ``D``.
 
